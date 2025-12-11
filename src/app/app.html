@@ -1,15 +1,16 @@
+<app-hero-section></app-hero-section>
+
 <main class="main">
   <div class="content">
-    <app-hero-section></app-hero-section>
     @if (editModeService.editMode) {
     <app-form-modify-creation></app-form-modify-creation>
-  
+
     }
     @if (showWorkoutService.workout) {
-      <app-workout></app-workout>
+    <app-workout></app-workout>
     }
     @else {
-      <app-show-exercise></app-show-exercise>
+    <app-show-exercise></app-show-exercise>
     }
 
 

@@ -1,5 +1,6 @@
 .main {
-  min-height: 100vh;
+  min-height: calc(100vh - 300px);
+  /* Adjust for hero */
   padding: 20px;
   display: flex;
   justify-content: center;
