@@ -1,0 +1,29 @@
+<div class="exercise-list">
+      <div class="button-container">
+        <button class="btn-insert" (click)="insertExercise()">
+          ➕ INSERISCI NUOVO ESERCIZIO
+        </button>
+      </div>
+
+      @for (item of exerciseService.exercises; track item.id) {
+      <div class="exercise-card">
+        <h2>⭐ {{ item.name }} ⭐</h2>
+        <p><strong>🎯 Gruppo muscolare:</strong> {{ item.muscleGroup }}</p>
+        <p><strong>📊 Serie:</strong> {{ item.sets }} | <strong>🔢 Ripetizioni:</strong> {{ item.reps }}</p>
+        @if (item.weightKg) {
+        <p><strong>💪 Peso (kg):</strong> {{ item.weightKg }}</p>
+        }
+        @if (item.notes) {
+        <p><strong>📝 Note:</strong> {{ item.notes }}</p>
+        }
+        <div class="button-group">
+          <button class="btn-edit" (click)="editExercise(item)">
+            ✏️ MODIFICA
+          </button>
+          <button class="btn-delete" (click)="deleteExercise(item.id)">
+            🗑️ ELIMINA
+          </button>
+        </div>
+      </div>
+      }
+    </div>
