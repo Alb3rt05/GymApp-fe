@@ -4,7 +4,11 @@
     @if (editModeService.editMode) {
     <app-form-modify-creation></app-form-modify-creation>
   
-    } @else {
+    }
+    @if (showWorkoutService.workout) {
+      <app-workout></app-workout>
+    }
+    @else {
       <app-show-exercise></app-show-exercise>
     }
 

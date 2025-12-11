@@ -1,0 +1,27 @@
+.main {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+.btn-back {
+  background-color: var(--primary-color);
+  color: var(--text-black);
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+}

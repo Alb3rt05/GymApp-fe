@@ -2,6 +2,8 @@ import { Component, signal } from '@angular/core';
 import { Exercise } from '../models/exercise';
 import { ExerciseService } from '../services/exercise-service';
 import { EditModeService } from '../services/edit-mode-service';
+import { RouterLink } from "@angular/router";
+import { ShowWorkoutService } from '../services/show-workout-service';
 
 @Component({
   selector: 'app-show-exercise',
@@ -13,13 +15,15 @@ export class ShowExercise {
   protected readonly title = signal('gym-app');
   exerciseToEdit: Exercise = new Exercise();
 
-  constructor(public exerciseService: ExerciseService, public editModeService: EditModeService) {}
+  constructor(public exerciseService: ExerciseService, public editModeService: EditModeService, public showWorkoutService: ShowWorkoutService) {}
 
 
   insertExercise() {
     this.editModeService.editMode = true;
   }
-
+  visualizeWorkout() {
+    this.showWorkoutService.workout = true;
+  }
   editExercise(exercise: Exercise) {
     this.editModeService.editMode = true;
     this.exerciseToEdit = exercise;

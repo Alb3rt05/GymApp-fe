@@ -6,15 +6,17 @@ import { HeroSection } from './hero-section/hero-section';
 import { FormModifyCreation } from './form-modify-creation/form-modify-creation';
 import { ShowExercise } from './show-exercise/show-exercise';
 import { EditModeService } from './services/edit-mode-service';
+import { ShowWorkoutService } from './services/show-workout-service';
+import { Workout } from './workout/workout';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, HeroSection, FormModifyCreation, ShowExercise],
+  imports: [RouterOutlet, FormsModule, HeroSection, FormModifyCreation, ShowExercise, Workout],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('gym-app');
   exerciseToEdit: Exercise = new Exercise();
- constructor(public editModeService: EditModeService) {}
+ constructor(public editModeService: EditModeService, public showWorkoutService: ShowWorkoutService) {}
   
 }
