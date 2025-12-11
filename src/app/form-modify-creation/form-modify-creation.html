@@ -1,0 +1,44 @@
+<h2><i class="fas fa-tools"></i> GESTIONE ESERCIZIO</h2>
+<div class="edit-mode">
+  <h3>
+    @if (exerciseToEdit.id) {
+    <i class="fas fa-edit"></i> Modifica: {{ exerciseToEdit.name }}
+    } @else {
+    <i class="fas fa-plus-circle"></i> Nuovo Esercizio
+    }
+  </h3>
+  <div class="form-grid">
+    <label>
+      Nome Esercizio:
+      <input type="text" [(ngModel)]="exerciseToEdit.name" placeholder="Es. Panca Piana" />
+    </label>
+    <label>
+      Gruppo Muscolare:
+      <input type="text" [(ngModel)]="exerciseToEdit.muscleGroup" placeholder="Es. Pettorali" />
+    </label>
+    <label>
+      Serie:
+      <input type="number" [(ngModel)]="exerciseToEdit.sets" placeholder="0" />
+    </label>
+    <label>
+      Ripetizioni:
+      <input type="number" [(ngModel)]="exerciseToEdit.reps" placeholder="0" />
+    </label>
+    <label>
+      Peso (kg):
+      <input type="number" [(ngModel)]="exerciseToEdit.weightKg" placeholder="0" />
+    </label>
+    <label class="full-width">
+      Note:
+      <textarea [(ngModel)]="exerciseToEdit.notes" placeholder="Note aggiuntive..."></textarea>
+    </label>
+  </div>
+  <div class="button-group">
+    <button class="btn-save" (click)="saveExercise()">
+      <i class="fas fa-save"></i> SALVA
+    </button>
+    <button class="btn-cancel" (click)="cancelEdit()">
+      <i class="fas fa-times"></i> ANNULLA
+    </button>
+  </div>
+</div>
