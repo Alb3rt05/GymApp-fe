@@ -5,6 +5,12 @@ import { Exercise } from '../models/exercise';
   providedIn: 'root',
 })
 export class ExerciseService {
+
+  constructor() {
+    if(localStorage.getItem('exercises')) {
+      this.exercises = JSON.parse(localStorage.getItem('exercises')!);
+    }
+  }
    exercises: Exercise[] = [
     {
       id: 1,
