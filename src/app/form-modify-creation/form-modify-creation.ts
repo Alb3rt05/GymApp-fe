@@ -19,7 +19,7 @@ export class FormModifyCreation {
 
    saveExercise() {
     if (!this.exerciseToEdit.name || this.exerciseToEdit.name.trim() === '') {
-      alert('Il nome dell\'esercizio è obbligatorio! ⚠️');
+      alert('Il nome dell\'esercizio è obbligatorio!');
       return;
     }
     if (this.exerciseToEdit.id === 0) {
@@ -33,6 +33,7 @@ export class FormModifyCreation {
     this.editModeService.editMode = false;
     // resetto l'esercizio in modifica
     this.exerciseToEdit = new Exercise();
+    localStorage.setItem('exercises', JSON.stringify(this.exerciseService.exercises));
   }
 
   cancelEdit() {

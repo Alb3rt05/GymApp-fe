@@ -30,7 +30,8 @@ export class ShowExercise {
     const confirmed = confirm(`Sei sicuro di voler eliminare questo esercizio? 🗑️`);
     if (confirmed) {
       this.exerciseService.exercises = this.exerciseService.exercises.filter(ex => ex.id !== id);
-      alert('Esercizio eliminato! ✅');
+      alert('Esercizio eliminato!');
+      localStorage.setItem('exercises', JSON.stringify(this.exerciseService.exercises));
     }
   }
 }
