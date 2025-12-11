@@ -1,9 +1,14 @@
 <main class="main">
-    <div class="header">
-        <button class="btn-back" (click)="returnBack()"><i class="fas fa-arrow-left"></i> TORNA INDIETRO</button>
-        <h1>I MIEI ALLENAMENTI</h1>
-    </div>
+  <div class="header">
+    <button class="btn-back" (click)="returnBack()"><i class="fas fa-arrow-left"></i> TORNA INDIETRO</button>
+    <h1>I MIEI ALLENAMENTI</h1>
+  </div>
   <div class="content">
-
+    @if (editModeWorkoutService.editModeWorkout) {
+    <app-form-modify-workout></app-form-modify-workout>
+    }
+    @else {
+    <app-show-workout></app-show-workout>
+    }
   </div>
 </main>
