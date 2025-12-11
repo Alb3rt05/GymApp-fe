@@ -1,9 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #F3E500; /* McFit Yellow */
+  --bg-dark: #000000;       /* Pure Black */
+  --bg-card: #1A1A1A;       /* Dark Gray */
+  --text-white: #FFFFFF;
+  --text-black: #000000;
+  --font-header: 'Oswald', sans-serif;
+  --font-body: 'Roboto Condensed', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background: linear-gradient(135deg, #ffffcc 0%, #ccffff 50%, #ffccff 100%);
-  background-attachment: fixed;
-  font-family: 'Comic Sans MS', 'Arial', cursive;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+}
+
+button {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
 }

@@ -1,31 +1,13 @@
-
-body {
-  background: linear-gradient(135deg, #ffffcc 0%, #ccffff 50%, #ffccff 100%);
-  background-attachment: fixed;
-  font-family: 'Comic Sans MS', 'Arial', cursive;
-  margin: 0;
-  padding: 0;
-}
-
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .main {
   min-height: 100vh;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #ffffcc 0%, #ccffff 50%, #ffccff 100%);
-  border: 5px solid #000000;
-  box-shadow: 10px 10px 0px #ff00ff, 15px 15px 0px #00ffff;
-  padding: 30px;
+  padding: 0 15px;
 }
-
-
-
